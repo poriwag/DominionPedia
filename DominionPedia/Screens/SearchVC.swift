@@ -76,11 +76,11 @@ class SearchVC: UIViewController {
         }
         cardTextField.resignFirstResponder()
         
-        let cardInfoVC = CardInfoVC(cardName: cardTextField.text!)
+        // let cardInfoVC = CardInfoVC(cardPass: card)
        // cardInfoVC.delegate = self
         
-        let navController = UINavigationController(rootViewController: cardInfoVC)
-        present(navController, animated: true)
+       // let navController = UINavigationController(rootViewController: cardInfoVC())
+       // present(navController, animated: true)
         
     }
     

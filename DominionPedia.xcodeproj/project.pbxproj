@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6664C13326DBA30F0038733D /* DPUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */; };
+		6664C13926DBA6F40038733D /* DPSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */; };
+		6664C13B26E9D9F40038733D /* DPFullScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */; };
+		6664C13D26E9DB5B0038733D /* DPFullScreenContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13C26E9DB5B0038733D /* DPFullScreenContainerView.swift */; };
+		6664C14126EABCAA0038733D /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C14026EABCAA0038733D /* UIImage+Ext.swift */; };
+		6664C14326EC20A60038733D /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C14226EC20A60038733D /* PersistenceManager.swift */; };
 		66783E7326BE35A000974ADE /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66783E7226BE35A000974ADE /* UIViewController+Ext.swift */; };
 		66783E7726D05DDE00974ADE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66783E7626D05DDE00974ADE /* String+Ext.swift */; };
 		66DA279726A6514800687663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA279626A6514800687663 /* AppDelegate.swift */; };
@@ -38,6 +44,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPUserInfoHeaderVC.swift; sourceTree = "<group>"; };
+		6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPSecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPFullScreenVC.swift; sourceTree = "<group>"; };
+		6664C13C26E9DB5B0038733D /* DPFullScreenContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPFullScreenContainerView.swift; sourceTree = "<group>"; };
+		6664C14026EABCAA0038733D /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		6664C14226EC20A60038733D /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		66783E7226BE35A000974ADE /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		66783E7626D05DDE00974ADE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		66DA279326A6514800687663 /* DominionPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,10 +93,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6664C13626DBA4D10038733D /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				66DA27C626AB9C3C00687663 /* DPButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		6664C13726DBA4DB0038733D /* Text FIeld */ = {
+			isa = PBXGroup;
+			children = (
+				66DA27C426AB91A300687663 /* DPTextField.swift */,
+			);
+			path = "Text FIeld";
+			sourceTree = "<group>";
+		};
 		66783E7126BE355900974ADE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				66783E7226BE35A000974ADE /* UIViewController+Ext.swift */,
+				6664C14026EABCAA0038733D /* UIImage+Ext.swift */,
 				66783E7626D05DDE00974ADE /* String+Ext.swift */,
 			);
 			path = Extensions;
@@ -140,14 +169,14 @@
 		66DA27B726A659BA00687663 /* Custon Views */ = {
 			isa = PBXGroup;
 			children = (
+				6664C13726DBA4DB0038733D /* Text FIeld */,
+				6664C13626DBA4D10038733D /* Button */,
 				66DA27D726B7583600687663 /* Cells */,
 				66DA27D426B4D8CF00687663 /* Views */,
 				66DA27D126B4D86300687663 /* ViewControllers */,
 				66DA27CE26B4D22800687663 /* ImageView */,
 				66DA27C126AB8EAE00687663 /* Labels */,
 				66DA27B826A659C900687663 /* TabBarController */,
-				66DA27C426AB91A300687663 /* DPTextField.swift */,
-				66DA27C626AB9C3C00687663 /* DPButton.swift */,
 			);
 			path = "Custon Views";
 			sourceTree = "<group>";
@@ -175,6 +204,7 @@
 			children = (
 				66DA27C226AB8EED00687663 /* DPTitleLabel.swift */,
 				66DA27CA26B4A52A00687663 /* DPBodyLabel.swift */,
+				6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -191,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				66DA27D226B4D88000687663 /* DPAlertVC.swift */,
+				6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */,
+				6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -199,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				66DA27D526B4D8EC00687663 /* DPAlertContainerView.swift */,
+				6664C13C26E9DB5B0038733D /* DPFullScreenContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				66DA27DE26BC890B00687663 /* NetworkManager.swift */,
+				6664C14226EC20A60038733D /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -301,12 +335,18 @@
 				66DA27B426A658E500687663 /* ToolsVC.swift in Sources */,
 				66DA27BA26A65A0300687663 /* DPTabBarController.swift in Sources */,
 				66DA279726A6514800687663 /* AppDelegate.swift in Sources */,
+				6664C13326DBA30F0038733D /* DPUserInfoHeaderVC.swift in Sources */,
+				6664C13B26E9D9F40038733D /* DPFullScreenVC.swift in Sources */,
 				66DA27DF26BC890B00687663 /* NetworkManager.swift in Sources */,
 				66DA27B626A658F500687663 /* MiscVC.swift in Sources */,
+				6664C13926DBA6F40038733D /* DPSecondaryTitleLabel.swift in Sources */,
+				6664C14326EC20A60038733D /* PersistenceManager.swift in Sources */,
+				6664C14126EABCAA0038733D /* UIImage+Ext.swift in Sources */,
 				66DA27C526AB91A300687663 /* DPTextField.swift in Sources */,
 				66DA27AB26A656C900687663 /* SearchVC.swift in Sources */,
 				66DA27D626B4D8ED00687663 /* DPAlertContainerView.swift in Sources */,
 				66783E7726D05DDE00974ADE /* String+Ext.swift in Sources */,
+				6664C13D26E9DB5B0038733D /* DPFullScreenContainerView.swift in Sources */,
 				66DA27CD26B4AD2500687663 /* UIHelper.swift in Sources */,
 				66DA27C026AB7A3000687663 /* Constants.swift in Sources */,
 				66DA27E526BE038F00687663 /* CardListCell.swift in Sources */,

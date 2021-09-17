@@ -46,8 +46,17 @@ class FavoritesCell: UITableViewCell {
     }
     
     func set(favorites: Card) {
-        usernameLabel.text = "default"
-        avatarImageView.image = Images.defaultImage
+        usernameLabel.text = favorites.cardName
+        avatarImageView.image = loadImage(card: favorites)
+    }
+    
+    func loadImage(card: Card) -> UIImage {
+        
+        let imageText = UIHelper.convertSpaceWithDash(str: card.cardName)
+        if let image = UIImage(named: imageText) {
+            return image
+        }
+        return UIImage(named: "CardBack")!
     }
 
 }

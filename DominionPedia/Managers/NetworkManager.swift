@@ -10,7 +10,7 @@ import UIKit
 
 class NetworkManager {
     static let shared   = NetworkManager()
-    let baseURL         = "https://dominioncardapi.pythonanywhere.com/cardset/"
+    let baseURL         = "https://dominioncardapi.pythonanywhere.com/cards/?set_name=Dominion"
     
     private init() {}
     

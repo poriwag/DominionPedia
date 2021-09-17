@@ -19,7 +19,6 @@ class ExpansionsVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureViewController()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {

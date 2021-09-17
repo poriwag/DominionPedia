@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 fileprivate var containerView: UIView!
 
@@ -17,6 +18,15 @@ extension UIViewController {
             alertVC.modalPresentationStyle  = .overFullScreen
             alertVC.modalTransitionStyle    = .crossDissolve
             self.present(alertVC, animated: true)
+        }
+    }
+    
+    func presentImageFullScreenOnMainThread(cardName: String) {
+        DispatchQueue.main.async {
+            let fullScreenVC = DPFullScreenVC(cardName: cardName)
+            fullScreenVC.modalPresentationStyle  = .overFullScreen
+            fullScreenVC.modalTransitionStyle    = .crossDissolve
+            self.present(fullScreenVC, animated: true)
         }
     }
     
@@ -50,5 +60,18 @@ extension UIViewController {
             containerView.removeFromSuperview()
             containerView = nil
         }
+    }
+    
+    func presentSafariVC(with url: URL) {
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.preferredControlTintColor = .systemBlue
+        present(safariVC, animated: true)
+    }
+    
+    func cardToURL(with card: Card) -> URL? {
+        var baseURL = "http://wiki.dominionstrategy.com/index.php/"
+        baseURL += card.cardName
+
+        return URL(string: baseURL)
     }
 }

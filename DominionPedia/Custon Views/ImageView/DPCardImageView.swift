@@ -32,4 +32,17 @@ class DPCardImageView: UIImageView {
     func setImage(image: UIImage){
         self.image = image
     }
+    
+
 }
+
+
+/*   func loadImage(card: Card) {
+       
+       let imageText = UIHelper.convertSpaceWithDash(str: card.cardName)
+       guard let avatar = UIImage(named: imageText) else {
+           image = Images.defaultImage
+           return
+       }
+       image = avatar
+   } */
