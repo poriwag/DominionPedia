@@ -52,7 +52,8 @@ class CardListCell: UICollectionViewCell {
             avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
             avatarImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             avatarImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            avatarImageView.heightAnchor.constraint(equalToConstant: height)
+            avatarImageView.heightAnchor.constraint(equalToConstant: height),
+            avatarImageView.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
     
@@ -66,7 +67,6 @@ class CardListCell: UICollectionViewCell {
             usernameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             usernameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             usernameLabel.heightAnchor.constraint(equalToConstant: 20)
-            
         ])
     }
 }

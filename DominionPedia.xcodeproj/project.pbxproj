@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		663B06D52702A0CF00005327 /* Expansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B06D42702A0CF00005327 /* Expansion.swift */; };
+		663B06D72704478300005327 /* ExpansionTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B06D62704478300005327 /* ExpansionTapGestureRecognizer.swift */; };
+		663B06D9270545A700005327 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663B06D8270545A700005327 /* Launch Screen.storyboard */; };
 		6664C13326DBA30F0038733D /* DPUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */; };
 		6664C13926DBA6F40038733D /* DPSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */; };
 		6664C13B26E9D9F40038733D /* DPFullScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */; };
@@ -41,9 +44,13 @@
 		66DA27E126BDDB1400687663 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27E026BDDB1400687663 /* CardList.swift */; };
 		66DA27E326BDFF3900687663 /* DPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27E226BDFF3900687663 /* DPError.swift */; };
 		66DA27E526BE038F00687663 /* CardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27E426BE038F00687663 /* CardListCell.swift */; };
+		66F8CB2E26F9DFFF0017861F /* DPExpansionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		663B06D42702A0CF00005327 /* Expansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansion.swift; sourceTree = "<group>"; };
+		663B06D62704478300005327 /* ExpansionTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		663B06D8270545A700005327 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPFullScreenVC.swift; sourceTree = "<group>"; };
@@ -80,6 +87,7 @@
 		66DA27E026BDDB1400687663 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		66DA27E226BDFF3900687663 /* DPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPError.swift; sourceTree = "<group>"; };
 		66DA27E426BE038F00687663 /* CardListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCell.swift; sourceTree = "<group>"; };
+		66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPExpansionImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,7 @@
 				66DA279826A6514800687663 /* SceneDelegate.swift */,
 				66DA279F26A6514D00687663 /* Assets.xcassets */,
 				66DA27A426A6514D00687663 /* Info.plist */,
+				663B06D8270545A700005327 /* Launch Screen.storyboard */,
 			);
 			path = DominionPedia;
 			sourceTree = "<group>";
@@ -192,9 +201,10 @@
 		66DA27BC26AB7A0800687663 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				66DA27CC26B4AD2500687663 /* UIHelper.swift */,
 				66DA27BF26AB7A3000687663 /* Constants.swift */,
+				66DA27CC26B4AD2500687663 /* UIHelper.swift */,
 				66DA27E226BDFF3900687663 /* DPError.swift */,
+				663B06D62704478300005327 /* ExpansionTapGestureRecognizer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -213,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				66DA27CF26B4D26200687663 /* DPCardImageView.swift */,
+				66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */,
 			);
 			path = ImageView;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 			children = (
 				66DA27DB26B7633100687663 /* Card.swift */,
 				66DA27E026BDDB1400687663 /* CardList.swift */,
+				663B06D42702A0CF00005327 /* Expansion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663B06D9270545A700005327 /* Launch Screen.storyboard in Resources */,
 				66DA27A026A6514D00687663 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,10 +362,12 @@
 				6664C13D26E9DB5B0038733D /* DPFullScreenContainerView.swift in Sources */,
 				66DA27CD26B4AD2500687663 /* UIHelper.swift in Sources */,
 				66DA27C026AB7A3000687663 /* Constants.swift in Sources */,
+				663B06D52702A0CF00005327 /* Expansion.swift in Sources */,
 				66DA27E526BE038F00687663 /* CardListCell.swift in Sources */,
 				66DA27CB26B4A52A00687663 /* DPBodyLabel.swift in Sources */,
 				66DA27C926B202A700687663 /* CardInfoVC.swift in Sources */,
 				66783E7326BE35A000974ADE /* UIViewController+Ext.swift in Sources */,
+				663B06D72704478300005327 /* ExpansionTapGestureRecognizer.swift in Sources */,
 				66DA27D326B4D88000687663 /* DPAlertVC.swift in Sources */,
 				66DA27E326BDFF3900687663 /* DPError.swift in Sources */,
 				66DA27D926B7585C00687663 /* FavoritesCell.swift in Sources */,
@@ -364,6 +379,7 @@
 				66DA27E126BDDB1400687663 /* CardList.swift in Sources */,
 				66DA27C726AB9C3C00687663 /* DPButton.swift in Sources */,
 				66DA279926A6514800687663 /* SceneDelegate.swift in Sources */,
+				66F8CB2E26F9DFFF0017861F /* DPExpansionImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

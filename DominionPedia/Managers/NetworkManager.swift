@@ -10,14 +10,14 @@ import UIKit
 
 class NetworkManager {
     static let shared   = NetworkManager()
-    let baseURL         = "https://dominioncardapi.pythonanywhere.com/cards/?set_name=Dominion"
+    let baseURL         = "https://dominioncardapi.pythonanywhere.com/cards/"
     
     private init() {}
     
     
     func getCardList(for expansion: String, page: Int, completed: @escaping (Result<[Card], DPError>) -> Void) {
         
-        let endpoint = baseURL
+        let endpoint = baseURL + expansion
         let semaphore = DispatchSemaphore (value: 0)
         
         

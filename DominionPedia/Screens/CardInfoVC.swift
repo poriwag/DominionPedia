@@ -19,6 +19,7 @@ class CardInfoVC: UIViewController {
     let itemViewTwo = UIView()
     
     let callToSafariButton = DPButton(backgroundColor: .purple, title: "Get More Info")
+    let callToExpansionButton = DPButton(backgroundColor: .blue, title: "Get Expansion List")
     
     weak var delegate: CardsVCDelegate!
     
@@ -38,6 +39,7 @@ class CardInfoVC: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureCallToSafariButton()
+        configureCallToExpansionButton()
         layoutUI()
         configureUIElements(with: card)
         imageFullScreen()
@@ -63,6 +65,11 @@ class CardInfoVC: UIViewController {
     func configureCallToSafariButton() {
         view.addSubview(callToSafariButton)
         callToSafariButton.addTarget(self, action: #selector(didTapSafariButton), for: .touchUpInside)
+    }
+    
+    func configureCallToExpansionButton() {
+        view.addSubview(callToExpansionButton)
+        callToExpansionButton.addTarget(self, action: #selector(didTapExpansionButton), for: .touchUpInside)
     }
     
     @objc func didTapSafariButton() {
@@ -107,7 +114,12 @@ class CardInfoVC: UIViewController {
             callToSafariButton.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             callToSafariButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
             callToSafariButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            callToSafariButton.heightAnchor.constraint(equalToConstant: buttonHeight)
+            callToSafariButton.heightAnchor.constraint(equalToConstant: buttonHeight),
+            
+            callToExpansionButton.topAnchor.constraint(equalTo: callToSafariButton.bottomAnchor, constant: padding),
+            callToExpansionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            callToExpansionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            callToExpansionButton.heightAnchor.constraint(equalToConstant: buttonHeight)
             /*
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
@@ -133,15 +145,7 @@ class CardInfoVC: UIViewController {
     }
     
     @objc func imageTapped(_ sender: UITapGestureRecognizer) {
-        
-        print("image has been tapped")
         presentImageFullScreenOnMainThread(cardName: card.cardName)
-        
-        /*let imageView = avatarImageView
-        imageView.frame = self.view.frame
-        imageView.backgroundColor = .black
-        imageView.contentMode = .top
-        imageView.isUserInteractionEnabled = true */
     }
     
     @objc func addButtonTapped() {
@@ -155,6 +159,17 @@ class CardInfoVC: UIViewController {
             }
             self.presentDPAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "OK")
         }
+    }
+    
+    @objc func didTapExpansionButton() {
+        var setName = card.setName
+        
+        if setName == "Dark Ages" {
+            setName = "dark"
+        }
+        
+        let cardsVC = CardsVC(expansionName: setName)
+        navigationController?.pushViewController(cardsVC, animated: true)
     }
 }
 

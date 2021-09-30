@@ -22,11 +22,23 @@ class CardsVC: UIViewController {
     var isSearching = false
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Card>!
+    var expansionName: String!
     
     
     init() {
         super.init(nibName: nil, bundle: nil)
+        expansionName = ""
+        title = "List of Cards"
+        
     }
+    
+    convenience init(expansionName: String) {
+        self.init()
+        self.expansionName = expansionName
+        title = expansionName
+    }
+    
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -37,14 +49,14 @@ class CardsVC: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureCollectionView()
-        getCardList()
+        getCardList(named: expansionName)
         configureDataSource()
         configureSearchController()
     }
     
     
     private func configureViewController() {
-        title = "List of Cards"
+        //title = "List of Cards"
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -56,6 +68,7 @@ class CardsVC: UIViewController {
         view.addSubview(collectionView)
         collectionView.backgroundColor = .systemBackground
         collectionView.register(CardListCell.self, forCellWithReuseIdentifier: CardListCell.reuseID)
+        
         
     }
     
@@ -105,11 +118,16 @@ class CardsVC: UIViewController {
     
     func getCardList(named expansion: String) {
         
-        let endpoint = "?set_name=\(expansion)"
+    
+        var endpoint = "?set_name=\(expansion)"
+
+        if expansion == "" {
+            endpoint = ""
+        }
         
         showLoadingView()
         
-        NetworkManager.shared.getCardList(for: expansion, page: 1) {[weak self] result in
+        NetworkManager.shared.getCardList(for: endpoint, page: 1) {[weak self] result in
             
             guard let self = self else { return }
             

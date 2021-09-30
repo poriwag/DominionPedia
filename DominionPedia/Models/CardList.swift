@@ -7,8 +7,9 @@
 
 import UIKit
 
-struct CardList: Codable {
+struct CardList {
     
     var cardName: String
     var source: String
+    var img: UIImage
 }

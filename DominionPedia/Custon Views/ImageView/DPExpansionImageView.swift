@@ -1,13 +1,13 @@
 //
-//  DPCardImageView.swift
+//  DPExpansionImageView.swift
 //  DominionPedia
 //
-//  Created by billy pak on 7/30/21.
+//  Created by billy pak on 9/21/21.
 //
 
 import UIKit
 
-class DPCardImageView: UIImageView {
+class DPExpansionImageView: UIImageView {
 
     let placeHolderImage = Images.defaultImage
     
@@ -27,22 +27,10 @@ class DPCardImageView: UIImageView {
         layer.cornerRadius = 3
         clipsToBounds = true
         image = placeHolderImage
-        
-        //contentMode = .scaleAspectFit
     }
     
     func setImage(image: UIImage){
         self.image = image
     }
+
 }
-
-
-/*   func loadImage(card: Card) {
-       
-       let imageText = UIHelper.convertSpaceWithDash(str: card.cardName)
-       guard let avatar = UIImage(named: imageText) else {
-           image = Images.defaultImage
-           return
-       }
-       image = avatar
-   } */
