@@ -22,24 +22,26 @@ class CardsVC: UIViewController {
     var isSearching = false
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Card>!
+    
     var expansionName: String!
+    var endPoint: String!
     
     
     init() {
         super.init(nibName: nil, bundle: nil)
         expansionName = ""
+        endPoint = ""
         title = "List of Cards"
         
     }
     
-    convenience init(expansionName: String) {
+    convenience init(expansionName: String, endpoint: String) {
         self.init()
         self.expansionName = expansionName
+        self.endPoint = endpoint
         title = expansionName
     }
-    
-    
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -49,11 +51,15 @@ class CardsVC: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureCollectionView()
-        getCardList(named: expansionName)
+        getCardList(named: expansionName, endpoint: endPoint)
         configureDataSource()
         configureSearchController()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     private func configureViewController() {
         //title = "List of Cards"
@@ -115,19 +121,50 @@ class CardsVC: UIViewController {
             self.updateData(on: self.listOfCards)
         }
     }
-    
-    func getCardList(named expansion: String) {
+//
+//    func getCardList(named expansion: String) {
+//
+//        var endpoint = "?set_name=\(expansion)"
+//
+//        //manipulating the JSON request. If the string is empty, make it empty.
+//        if expansion == "" {
+//            endpoint = ""
+//        }
+//
+//        showLoadingView()
+//
+//        NetworkManager.shared.getCardList(for: endpoint, page: 1) {[weak self] result in
+//
+//            guard let self = self else { return }
+//
+//            self.dismissLoadingView()
+//
+//            switch result {
+//            case .success(let cards):
+//                self.listOfCards.append(contentsOf: cards)
+//                if self.listOfCards.isEmpty {
+//                    let message = "NO Cards Avaliable"
+//                    self.presentDPAlertOnMainThread(title: "Error", message: message, buttonTitle: "Ok")
+//                }
+//            case .failure(let error):
+//                self.presentDPAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "ok")
+//            }
+//            self.updateData(on: self.listOfCards)
+//        }
+//    }
+//
+    func getCardList(named expansion: String, endpoint: String) {
         
-    
-        var endpoint = "?set_name=\(expansion)"
+        var combinedEndpoint = endpoint + expansion
 
+        //manipulating the JSON request. If the string is empty, make it empty.
         if expansion == "" {
-            endpoint = ""
+            combinedEndpoint = ""
         }
         
         showLoadingView()
         
-        NetworkManager.shared.getCardList(for: endpoint, page: 1) {[weak self] result in
+        NetworkManager.shared.getCardList(for: combinedEndpoint, page: 1) {[weak self] result in
             
             guard let self = self else { return }
             
@@ -146,6 +183,7 @@ class CardsVC: UIViewController {
             self.updateData(on: self.listOfCards)
         }
     }
+    
     
     func updateData(on cardList: [Card]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Card>()
@@ -193,7 +231,6 @@ extension CardsVC: UISearchBarDelegate, UISearchResultsUpdating {
 
 extension CardsVC: CardsVCDelegate {
     func didRequestCards(for card: String) {
-        
         //resetting the whole page
         listOfCards.removeAll()
         filteredListOfCards.removeAll()

@@ -27,7 +27,9 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //navigationController?.setNavigationBarHidden(true, animated: true)
+        cardTextField.text = ""
+        title = ""
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     //Configure func
@@ -58,8 +60,8 @@ class SearchVC: UIViewController {
     
     private func configureCallToActionButton() {
         view.addSubview(callToActionButton)
+        callToActionButton.addTarget(self, action: #selector(pushCardInfo), for: .touchUpInside)
         
-        callToActionButton.addTarget(self, action: #selector(pushCardView), for: .touchUpInside)
         NSLayoutConstraint.activate([
             callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
             callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -68,20 +70,16 @@ class SearchVC: UIViewController {
         ])
     }
     
-    @objc func pushCardView() {
+    @objc func pushCardInfo() {
         
         guard isCardNameEntered else {
-            print("error")
+            presentDPAlertOnMainThread(title: "Empty Card Name", message: "Please enter a card name", buttonTitle: "Ok")
             return
         }
-        cardTextField.resignFirstResponder()
         
-        // let cardInfoVC = CardInfoVC(cardPass: card)
-       // cardInfoVC.delegate = self
-        
-       // let navController = UINavigationController(rootViewController: cardInfoVC())
-       // present(navController, animated: true)
-        
+        let cardName = cardTextField.text!
+        let cardNameSearchVC = CardsVC(expansionName: cardName, endpoint: DominionEndPoints.Cards)
+        navigationController?.pushViewController(cardNameSearchVC, animated: true)
     }
     
     func createDismissKeyboardTapGesture() {
@@ -93,7 +91,7 @@ class SearchVC: UIViewController {
 
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        pushCardView()
+        pushCardInfo()
         return true
     }
 }

@@ -168,7 +168,7 @@ class CardInfoVC: UIViewController {
             setName = "dark"
         }
         
-        let cardsVC = CardsVC(expansionName: setName)
+        let cardsVC = CardsVC(expansionName: setName, endpoint: DominionEndPoints.Expansion)
         navigationController?.pushViewController(cardsVC, animated: true)
     }
 }

@@ -13,6 +13,11 @@ enum SFSymbols {
     static let expansionBox = UIImage(systemName: "archivebox.fill")
     static let settings = UIImage(systemName: "gearshape")
     static let money = UIImage(systemName: "dollarsign.circle")
+    
+    static let person = UIImage(systemName: "person.fill")
+    static let brainHead = UIImage(systemName: "brain.head.profile")
+    
+    static let placeHolder = UIImage(systemName: "photo.artframe")
 }
 
 enum Images {
@@ -45,6 +50,11 @@ enum Expansions {
     static let menagerie     = UIImage(named: "menagerie_expansion")
 }
 
+enum DominionEndPoints {
+    static let Expansion = "?set_name="
+    static let Cards = "?card_name="
+    
+}
 let expansionList: [String] = ["dominion",
                                     "intrigue",
                                     "seaside",

@@ -2,6 +2,7 @@
 
 Dominion Board game based app where you can look up card information easily. Provides all the details and also provides links to potential strategies and extra uses for the card if wanting to look more into depth. 
 
+
 ## Expansions
 Allows you to check check the avaliable expansions and the list of cards in the expansion
 
@@ -24,3 +25,4 @@ A list of favorites you may add through the card
 
 
 <img width="357" alt="Screen Shot 2021-10-19 at 2 32 40 PM" src="https://user-images.githubusercontent.com/14205107/137994987-208a83a9-7a0e-487f-9026-a714cd6d88c0.png">
+
