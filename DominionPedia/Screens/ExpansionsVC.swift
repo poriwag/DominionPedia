@@ -113,7 +113,7 @@ class ExpansionsVC: UIViewController {
         //sender.arrayValue = index for array(counter) look underConstants.
         let i = sender.arrayValue ?? 0
         
-        let cardsVC = CardsVC(expansionName: listOfExpansions[i].urlName)
+        let cardsVC = CardsVC(expansionName: listOfExpansions[i].urlName, endpoint: DominionEndPoints.Expansion)
         navigationController?.pushViewController(cardsVC, animated: true)
     }
 }

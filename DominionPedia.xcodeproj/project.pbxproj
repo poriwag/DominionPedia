@@ -44,6 +44,9 @@
 		66DA27E126BDDB1400687663 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27E026BDDB1400687663 /* CardList.swift */; };
 		66DA27E326BDFF3900687663 /* DPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27E226BDFF3900687663 /* DPError.swift */; };
 		66DA27E526BE038F00687663 /* CardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27E426BE038F00687663 /* CardListCell.swift */; };
+		66E268742720AE3E00EB66B3 /* ToolsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268732720AE3E00EB66B3 /* ToolsModel.swift */; };
+		66E268762720B58300EB66B3 /* ToolsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268752720B58300EB66B3 /* ToolsCell.swift */; };
+		66E2687A2720B79100EB66B3 /* DPToolsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268792720B79100EB66B3 /* DPToolsImageView.swift */; };
 		66F8CB2E26F9DFFF0017861F /* DPExpansionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +90,9 @@
 		66DA27E026BDDB1400687663 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		66DA27E226BDFF3900687663 /* DPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPError.swift; sourceTree = "<group>"; };
 		66DA27E426BE038F00687663 /* CardListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCell.swift; sourceTree = "<group>"; };
+		66E268732720AE3E00EB66B3 /* ToolsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsModel.swift; sourceTree = "<group>"; };
+		66E268752720B58300EB66B3 /* ToolsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsCell.swift; sourceTree = "<group>"; };
+		66E268792720B79100EB66B3 /* DPToolsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPToolsImageView.swift; sourceTree = "<group>"; };
 		66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPExpansionImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +230,7 @@
 			children = (
 				66DA27CF26B4D26200687663 /* DPCardImageView.swift */,
 				66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */,
+				66E268792720B79100EB66B3 /* DPToolsImageView.swift */,
 			);
 			path = ImageView;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 			children = (
 				66DA27D826B7585C00687663 /* FavoritesCell.swift */,
 				66DA27E426BE038F00687663 /* CardListCell.swift */,
+				66E268752720B58300EB66B3 /* ToolsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -262,6 +270,7 @@
 				66DA27DB26B7633100687663 /* Card.swift */,
 				66DA27E026BDDB1400687663 /* CardList.swift */,
 				663B06D42702A0CF00005327 /* Expansion.swift */,
+				66E268732720AE3E00EB66B3 /* ToolsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,6 +365,8 @@
 				6664C14326EC20A60038733D /* PersistenceManager.swift in Sources */,
 				6664C14126EABCAA0038733D /* UIImage+Ext.swift in Sources */,
 				66DA27C526AB91A300687663 /* DPTextField.swift in Sources */,
+				66E268742720AE3E00EB66B3 /* ToolsModel.swift in Sources */,
+				66E268762720B58300EB66B3 /* ToolsCell.swift in Sources */,
 				66DA27AB26A656C900687663 /* SearchVC.swift in Sources */,
 				66DA27D626B4D8ED00687663 /* DPAlertContainerView.swift in Sources */,
 				66783E7726D05DDE00974ADE /* String+Ext.swift in Sources */,
@@ -374,6 +385,7 @@
 				66DA27B226A658D300687663 /* CardsVC.swift in Sources */,
 				66DA27B026A658BD00687663 /* ExpansionsVC.swift in Sources */,
 				66DA27DC26B7633100687663 /* Card.swift in Sources */,
+				66E2687A2720B79100EB66B3 /* DPToolsImageView.swift in Sources */,
 				66DA27D026B4D26200687663 /* DPCardImageView.swift in Sources */,
 				66DA27AE26A658AC00687663 /* FavoritesVC.swift in Sources */,
 				66DA27E126BDDB1400687663 /* CardList.swift in Sources */,
