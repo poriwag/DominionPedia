@@ -29,8 +29,10 @@ class DPTitleLabel: UILabel {
         translatesAutoresizingMaskIntoConstraints = false
         textColor = .label
         adjustsFontSizeToFitWidth = true
+        //font = UIFont.preferredFont(forTextStyle: .headline)
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
+        
     }
     
     

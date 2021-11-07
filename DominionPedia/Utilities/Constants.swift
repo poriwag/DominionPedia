@@ -71,19 +71,19 @@ let expansionList: [String] = ["dominion",
                                     "menagerie_expansion"]
 
 
-let dominion    = Expansion(expansionName: "Dominion", urlName: "dominion", source: expansionList[0])
+let dominion    = Expansion(expansionName: "Dominion", urlName: "Dominion", source: expansionList[0])
 let intrigue    = Expansion(expansionName: "Intrigue", urlName: "Intrigue", source: expansionList[1])
 let seaside     = Expansion(expansionName: "Seaside", urlName: "Seaside", source: expansionList[2])
 let alchemy     = Expansion(expansionName: "Alchemy", urlName: "Alchemy", source: expansionList[3])
 let prosperity  = Expansion(expansionName: "Prosperity", urlName: "Prosperity", source: expansionList[4])
 let cornucopia  = Expansion(expansionName: "Cornucopia", urlName: "Cornucopia", source: expansionList[5])
 let hinterlands = Expansion(expansionName: "Hinterlands", urlName: "Hinterlands", source: expansionList[6])
-let darkAges    = Expansion(expansionName: "Dark Ages", urlName: "dark", source: expansionList[7])
-let guilds      = Expansion(expansionName: "Guilds", urlName: "guilds", source: expansionList[8])
-let adventures  = Expansion(expansionName: "Adventures", urlName: "adventures", source: expansionList[9])
-let empires     = Expansion(expansionName: "Empires", urlName: "empires", source: expansionList[10])
-let nocturne    = Expansion(expansionName: "Nocturne", urlName: "nocturne", source: expansionList[11])
-let renaissance = Expansion(expansionName: "Renaissance", urlName: "renaissance", source: expansionList[12])
+let darkAges    = Expansion(expansionName: "Dark Ages", urlName: "Dark", source: expansionList[7])
+let guilds      = Expansion(expansionName: "Guilds", urlName: "Guilds", source: expansionList[8])
+let adventures  = Expansion(expansionName: "Adventures", urlName: "Adventures", source: expansionList[9])
+let empires     = Expansion(expansionName: "Empires", urlName: "Empires", source: expansionList[10])
+let nocturne    = Expansion(expansionName: "Nocturne", urlName: "Nocturne", source: expansionList[11])
+let renaissance = Expansion(expansionName: "Renaissance", urlName: "Renaissance", source: expansionList[12])
 //Menagerie is released but not updated on the Dominion API
 //let menagerie   = Expansion(expansionName: "Menagerie", urlName: "menagerie", source: expansionList[13])
 

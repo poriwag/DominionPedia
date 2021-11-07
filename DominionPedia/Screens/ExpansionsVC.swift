@@ -28,12 +28,15 @@ class ExpansionsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        scrollView.setContentOffset(.zero, animated: true)
+       // navigationController?.setNavigationBarHidden(false, animated: true)
+                
     }
     
     private func configureViewController() {
         title = "Expansion"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .never
+        //navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func configureScrollView() {

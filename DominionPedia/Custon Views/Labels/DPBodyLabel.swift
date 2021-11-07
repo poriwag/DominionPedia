@@ -28,7 +28,6 @@ class DPBodyLabel: UILabel {
         textColor = .secondaryLabel
         font = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontSizeToFitWidth = false
-        
         minimumScaleFactor = 0.75
         lineBreakMode = .byWordWrapping
     }
