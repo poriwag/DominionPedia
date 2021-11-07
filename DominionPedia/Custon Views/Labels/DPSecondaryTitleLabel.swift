@@ -31,5 +31,6 @@ class DPSecondaryTitleLabel: UILabel {
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.90
         lineBreakMode = .byTruncatingHead
+        //font = UIFont.preferredFont(forTextStyle: .headline)
     }
 }

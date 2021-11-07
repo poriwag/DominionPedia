@@ -10,6 +10,9 @@
 		663B06D52702A0CF00005327 /* Expansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B06D42702A0CF00005327 /* Expansion.swift */; };
 		663B06D72704478300005327 /* ExpansionTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B06D62704478300005327 /* ExpansionTapGestureRecognizer.swift */; };
 		663B06D9270545A700005327 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663B06D8270545A700005327 /* Launch Screen.storyboard */; };
+		6656C71A2737DAEE00F83CA2 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6656C7192737DAEE00F83CA2 /* ValidationService.swift */; };
+		6656C7222737DC5100F83CA2 /* DominionPediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6656C7212737DC5100F83CA2 /* DominionPediaTests.swift */; };
+		6656C7292737DC9000F83CA2 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6656C7282737DC9000F83CA2 /* ValidationServiceTests.swift */; };
 		6664C13326DBA30F0038733D /* DPUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */; };
 		6664C13926DBA6F40038733D /* DPSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */; };
 		6664C13B26E9D9F40038733D /* DPFullScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */; };
@@ -50,10 +53,24 @@
 		66F8CB2E26F9DFFF0017861F /* DPExpansionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6656C7232737DC5100F83CA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66DA278B26A6514800687663 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66DA279226A6514800687663;
+			remoteInfo = DominionPedia;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		663B06D42702A0CF00005327 /* Expansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansion.swift; sourceTree = "<group>"; };
 		663B06D62704478300005327 /* ExpansionTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		663B06D8270545A700005327 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		6656C7192737DAEE00F83CA2 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
+		6656C71F2737DC5100F83CA2 /* DominionPediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DominionPediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6656C7212737DC5100F83CA2 /* DominionPediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionPediaTests.swift; sourceTree = "<group>"; };
+		6656C7282737DC9000F83CA2 /* ValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceTests.swift; sourceTree = "<group>"; };
 		6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPFullScreenVC.swift; sourceTree = "<group>"; };
@@ -97,6 +114,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6656C71C2737DC5100F83CA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66DA279026A6514800687663 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,6 +131,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6656C7182737DAC500F83CA2 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				6656C7192737DAEE00F83CA2 /* ValidationService.swift */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		6656C7202737DC5100F83CA2 /* DominionPediaTests */ = {
+			isa = PBXGroup;
+			children = (
+				6656C7212737DC5100F83CA2 /* DominionPediaTests.swift */,
+				6656C7282737DC9000F83CA2 /* ValidationServiceTests.swift */,
+			);
+			path = DominionPediaTests;
+			sourceTree = "<group>";
+		};
 		6664C13626DBA4D10038733D /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				66DA279526A6514800687663 /* DominionPedia */,
+				6656C7202737DC5100F83CA2 /* DominionPediaTests */,
 				66DA279426A6514800687663 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -145,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				66DA279326A6514800687663 /* DominionPedia.app */,
+				6656C71F2737DC5100F83CA2 /* DominionPediaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +195,7 @@
 		66DA279526A6514800687663 /* DominionPedia */ = {
 			isa = PBXGroup;
 			children = (
+				6656C7182737DAC500F83CA2 /* Testing */,
 				66783E7126BE355900974ADE /* Extensions */,
 				66DA27DD26BC88FC00687663 /* Managers */,
 				66DA27DA26B7631A00687663 /* Models */,
@@ -287,6 +331,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6656C71E2737DC5100F83CA2 /* DominionPediaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6656C7252737DC5100F83CA2 /* Build configuration list for PBXNativeTarget "DominionPediaTests" */;
+			buildPhases = (
+				6656C71B2737DC5100F83CA2 /* Sources */,
+				6656C71C2737DC5100F83CA2 /* Frameworks */,
+				6656C71D2737DC5100F83CA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6656C7242737DC5100F83CA2 /* PBXTargetDependency */,
+			);
+			name = DominionPediaTests;
+			productName = DominionPediaTests;
+			productReference = 6656C71F2737DC5100F83CA2 /* DominionPediaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		66DA279226A6514800687663 /* DominionPedia */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66DA27A726A6514D00687663 /* Build configuration list for PBXNativeTarget "DominionPedia" */;
@@ -310,9 +372,13 @@
 		66DA278B26A6514800687663 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					6656C71E2737DC5100F83CA2 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 66DA279226A6514800687663;
+					};
 					66DA279226A6514800687663 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -332,11 +398,19 @@
 			projectRoot = "";
 			targets = (
 				66DA279226A6514800687663 /* DominionPedia */,
+				6656C71E2737DC5100F83CA2 /* DominionPediaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6656C71D2737DC5100F83CA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66DA279126A6514800687663 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,6 +423,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6656C71B2737DC5100F83CA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6656C7292737DC9000F83CA2 /* ValidationServiceTests.swift in Sources */,
+				6656C7222737DC5100F83CA2 /* DominionPediaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66DA278F26A6514800687663 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,6 +442,7 @@
 				66DA279726A6514800687663 /* AppDelegate.swift in Sources */,
 				6664C13326DBA30F0038733D /* DPUserInfoHeaderVC.swift in Sources */,
 				6664C13B26E9D9F40038733D /* DPFullScreenVC.swift in Sources */,
+				6656C71A2737DAEE00F83CA2 /* ValidationService.swift in Sources */,
 				66DA27DF26BC890B00687663 /* NetworkManager.swift in Sources */,
 				66DA27B626A658F500687663 /* MiscVC.swift in Sources */,
 				6664C13926DBA6F40038733D /* DPSecondaryTitleLabel.swift in Sources */,
@@ -397,7 +481,65 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6656C7242737DC5100F83CA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66DA279226A6514800687663 /* DominionPedia */;
+			targetProxy = 6656C7232737DC5100F83CA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		6656C7262737DC5100F83CA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 27TJPLK9L4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Billypak.DominionPediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DominionPedia.app/DominionPedia";
+			};
+			name = Debug;
+		};
+		6656C7272737DC5100F83CA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 27TJPLK9L4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Billypak.DominionPediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DominionPedia.app/DominionPedia";
+			};
+			name = Release;
+		};
 		66DA27A526A6514D00687663 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -555,6 +697,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6656C7252737DC5100F83CA2 /* Build configuration list for PBXNativeTarget "DominionPediaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6656C7262737DC5100F83CA2 /* Debug */,
+				6656C7272737DC5100F83CA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		66DA278E26A6514800687663 /* Build configuration list for PBXProject "DominionPedia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
