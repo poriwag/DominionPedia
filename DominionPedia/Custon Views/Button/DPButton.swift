@@ -18,23 +18,41 @@ class DPButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(backgroundColor: UIColor, title: String) {
+    convenience init(color: UIColor, title: String) {
         self.init(frame: .zero)
-        self.backgroundColor = backgroundColor
-        self.setTitle(title, for: .normal)
+        set(color: color, title: title)
+    }
+    
+    convenience init(color: UIColor, title: String, systemImage: String) {
+        self.init(frame: .zero)
+        set(color: color, title: title, systemImage: systemImage)
+        
     }
     
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
-        
-        layer.cornerRadius = 10
-        setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        configuration = .filled()
+        configuration?.cornerStyle = .medium
+        //old way
+        //setTitleColor(.white, for: .normal)
+        //titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
     }
     
-    func set(backgroundColor: UIColor, title: String){
-        self.backgroundColor = backgroundColor
-        setTitle(title, for: .normal)
+    func set(color: UIColor, title: String) {
+        configuration?.baseBackgroundColor = color
+        configuration?.baseForegroundColor = .white
+        configuration?.title = title
+    }
+    
+    func set(color: UIColor, title: String, systemImage: String) {
+        configuration?.baseBackgroundColor = color
+        configuration?.baseForegroundColor = .white
+        configuration?.title = title
+        
+        configuration?.image = UIImage(systemName: systemImage)
+        configuration?.imagePadding = 12
+        configuration?.imagePlacement = .leading
+        
     }
     
 }

@@ -82,7 +82,6 @@ class CardsVC: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<Section, Card>(collectionView: collectionView, cellProvider: {(collectionView, indexPath, card) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardListCell.reuseID, for: indexPath) as! CardListCell
             cell.set(card: card)
-            
             return cell
         })
     }

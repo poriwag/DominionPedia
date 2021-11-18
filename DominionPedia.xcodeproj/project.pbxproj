@@ -13,6 +13,7 @@
 		6656C71A2737DAEE00F83CA2 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6656C7192737DAEE00F83CA2 /* ValidationService.swift */; };
 		6656C7222737DC5100F83CA2 /* DominionPediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6656C7212737DC5100F83CA2 /* DominionPediaTests.swift */; };
 		6656C7292737DC9000F83CA2 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6656C7282737DC9000F83CA2 /* ValidationServiceTests.swift */; };
+		6660C97E2745F4AB00505D35 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660C97D2745F4AB00505D35 /* ZoomAndSnapFlowLayout.swift */; };
 		6664C13326DBA30F0038733D /* DPUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */; };
 		6664C13926DBA6F40038733D /* DPSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */; };
 		6664C13B26E9D9F40038733D /* DPFullScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */; };
@@ -21,6 +22,9 @@
 		6664C14326EC20A60038733D /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C14226EC20A60038733D /* PersistenceManager.swift */; };
 		66783E7326BE35A000974ADE /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66783E7226BE35A000974ADE /* UIViewController+Ext.swift */; };
 		66783E7726D05DDE00974ADE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66783E7626D05DDE00974ADE /* String+Ext.swift */; };
+		66A39C59273FAA0A0007CAC4 /* CardRandomizerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A39C58273FAA0A0007CAC4 /* CardRandomizerVC.swift */; };
+		66A39C5B273FBEB50007CAC4 /* CardRandomizerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A39C5A273FBEB40007CAC4 /* CardRandomizerCell.swift */; };
+		66A39C5D274103FF0007CAC4 /* dummyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A39C5C274103FF0007CAC4 /* dummyVC.swift */; };
 		66DA279726A6514800687663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA279626A6514800687663 /* AppDelegate.swift */; };
 		66DA279926A6514800687663 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA279826A6514800687663 /* SceneDelegate.swift */; };
 		66DA27A026A6514D00687663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66DA279F26A6514D00687663 /* Assets.xcassets */; };
@@ -29,7 +33,6 @@
 		66DA27B026A658BD00687663 /* ExpansionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27AF26A658BD00687663 /* ExpansionsVC.swift */; };
 		66DA27B226A658D300687663 /* CardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27B126A658D300687663 /* CardsVC.swift */; };
 		66DA27B426A658E500687663 /* ToolsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27B326A658E500687663 /* ToolsVC.swift */; };
-		66DA27B626A658F500687663 /* MiscVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27B526A658F500687663 /* MiscVC.swift */; };
 		66DA27BA26A65A0300687663 /* DPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27B926A65A0300687663 /* DPTabBarController.swift */; };
 		66DA27C026AB7A3000687663 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27BF26AB7A3000687663 /* Constants.swift */; };
 		66DA27C326AB8EED00687663 /* DPTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA27C226AB8EED00687663 /* DPTitleLabel.swift */; };
@@ -71,6 +74,7 @@
 		6656C71F2737DC5100F83CA2 /* DominionPediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DominionPediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6656C7212737DC5100F83CA2 /* DominionPediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionPediaTests.swift; sourceTree = "<group>"; };
 		6656C7282737DC9000F83CA2 /* ValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceTests.swift; sourceTree = "<group>"; };
+		6660C97D2745F4AB00505D35 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
 		6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPFullScreenVC.swift; sourceTree = "<group>"; };
@@ -79,6 +83,9 @@
 		6664C14226EC20A60038733D /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		66783E7226BE35A000974ADE /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		66783E7626D05DDE00974ADE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		66A39C58273FAA0A0007CAC4 /* CardRandomizerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRandomizerVC.swift; sourceTree = "<group>"; };
+		66A39C5A273FBEB40007CAC4 /* CardRandomizerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRandomizerCell.swift; sourceTree = "<group>"; };
+		66A39C5C274103FF0007CAC4 /* dummyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyVC.swift; sourceTree = "<group>"; };
 		66DA279326A6514800687663 /* DominionPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66DA279626A6514800687663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66DA279826A6514800687663 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +96,6 @@
 		66DA27AF26A658BD00687663 /* ExpansionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionsVC.swift; sourceTree = "<group>"; };
 		66DA27B126A658D300687663 /* CardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsVC.swift; sourceTree = "<group>"; };
 		66DA27B326A658E500687663 /* ToolsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsVC.swift; sourceTree = "<group>"; };
-		66DA27B526A658F500687663 /* MiscVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscVC.swift; sourceTree = "<group>"; };
 		66DA27B926A65A0300687663 /* DPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPTabBarController.swift; sourceTree = "<group>"; };
 		66DA27BF26AB7A3000687663 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		66DA27C226AB8EED00687663 /* DPTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPTitleLabel.swift; sourceTree = "<group>"; };
@@ -219,8 +225,9 @@
 				66DA27AF26A658BD00687663 /* ExpansionsVC.swift */,
 				66DA27B126A658D300687663 /* CardsVC.swift */,
 				66DA27B326A658E500687663 /* ToolsVC.swift */,
-				66DA27B526A658F500687663 /* MiscVC.swift */,
 				66DA27C826B202A700687663 /* CardInfoVC.swift */,
+				66A39C58273FAA0A0007CAC4 /* CardRandomizerVC.swift */,
+				66A39C5C274103FF0007CAC4 /* dummyVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 				66DA27CC26B4AD2500687663 /* UIHelper.swift */,
 				66DA27E226BDFF3900687663 /* DPError.swift */,
 				663B06D62704478300005327 /* ExpansionTapGestureRecognizer.swift */,
+				6660C97D2745F4AB00505D35 /* ZoomAndSnapFlowLayout.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 				66DA27D826B7585C00687663 /* FavoritesCell.swift */,
 				66DA27E426BE038F00687663 /* CardListCell.swift */,
 				66E268752720B58300EB66B3 /* ToolsCell.swift */,
+				66A39C5A273FBEB40007CAC4 /* CardRandomizerCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -439,12 +448,12 @@
 				66DA27C326AB8EED00687663 /* DPTitleLabel.swift in Sources */,
 				66DA27B426A658E500687663 /* ToolsVC.swift in Sources */,
 				66DA27BA26A65A0300687663 /* DPTabBarController.swift in Sources */,
+				66A39C5D274103FF0007CAC4 /* dummyVC.swift in Sources */,
 				66DA279726A6514800687663 /* AppDelegate.swift in Sources */,
 				6664C13326DBA30F0038733D /* DPUserInfoHeaderVC.swift in Sources */,
 				6664C13B26E9D9F40038733D /* DPFullScreenVC.swift in Sources */,
 				6656C71A2737DAEE00F83CA2 /* ValidationService.swift in Sources */,
 				66DA27DF26BC890B00687663 /* NetworkManager.swift in Sources */,
-				66DA27B626A658F500687663 /* MiscVC.swift in Sources */,
 				6664C13926DBA6F40038733D /* DPSecondaryTitleLabel.swift in Sources */,
 				6664C14326EC20A60038733D /* PersistenceManager.swift in Sources */,
 				6664C14126EABCAA0038733D /* UIImage+Ext.swift in Sources */,
@@ -465,13 +474,16 @@
 				663B06D72704478300005327 /* ExpansionTapGestureRecognizer.swift in Sources */,
 				66DA27D326B4D88000687663 /* DPAlertVC.swift in Sources */,
 				66DA27E326BDFF3900687663 /* DPError.swift in Sources */,
+				66A39C5B273FBEB50007CAC4 /* CardRandomizerCell.swift in Sources */,
 				66DA27D926B7585C00687663 /* FavoritesCell.swift in Sources */,
 				66DA27B226A658D300687663 /* CardsVC.swift in Sources */,
 				66DA27B026A658BD00687663 /* ExpansionsVC.swift in Sources */,
+				66A39C59273FAA0A0007CAC4 /* CardRandomizerVC.swift in Sources */,
 				66DA27DC26B7633100687663 /* Card.swift in Sources */,
 				66E2687A2720B79100EB66B3 /* DPToolsImageView.swift in Sources */,
 				66DA27D026B4D26200687663 /* DPCardImageView.swift in Sources */,
 				66DA27AE26A658AC00687663 /* FavoritesVC.swift in Sources */,
+				6660C97E2745F4AB00505D35 /* ZoomAndSnapFlowLayout.swift in Sources */,
 				66DA27E126BDDB1400687663 /* CardList.swift in Sources */,
 				66DA27C726AB9C3C00687663 /* DPButton.swift in Sources */,
 				66DA279926A6514800687663 /* SceneDelegate.swift in Sources */,
@@ -591,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -646,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

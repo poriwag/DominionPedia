@@ -36,6 +36,18 @@ class ToolsVC: UIViewController {
 }
 
 extension ToolsVC: UITableViewDelegate, UITableViewDataSource {
+    // MARK: UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+            case 3:
+            navigationController?.pushViewController(CardRandomizerVC(), animated: true)
+        default:
+                print("Cell does not exist")
+        }
+    }
+    
+    
+    //MARK: UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
