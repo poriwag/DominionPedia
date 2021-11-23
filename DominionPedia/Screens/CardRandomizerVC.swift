@@ -9,10 +9,17 @@ import UIKit
 
 class CardRandomizerVC: UIViewController {
 
-    private var indexOfCellBeforeDragging = 0
+    enum Section {
+        case main
+    }
+    
+    var listOfCards: [Card] = []
+    var filteredListOfCards: [Card] = []
+    var shuffedList: [Card] = []
     
     private var scrollView = UIScrollView()
     var collectionView: UICollectionView!
+    var randomlizeListOfNumber: [Int] = []
     
     
     override func viewDidLoad() {
@@ -20,6 +27,12 @@ class CardRandomizerVC: UIViewController {
         view.backgroundColor = .systemBackground
         
         configureCollectionView()
+        getCardList(named: "", endpoint: "")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //getCardList(named: "", endpoint: "")
     }
     
     func configureCollectionView() {
@@ -33,7 +46,6 @@ class CardRandomizerVC: UIViewController {
 
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .red
         //collectionView.isPagingEnabled = true
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -43,13 +55,69 @@ class CardRandomizerVC: UIViewController {
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
+        
+        
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 450)
+            collectionView.heightAnchor.constraint(equalToConstant: 550)
         ])
     }
+    
+
+    
+    func getCardList(named expansion: String, endpoint: String) {
+        
+        var combinedEndpoint = endpoint + expansion
+
+        //manipulating the JSON request. If the string is empty, make it empty.
+        if expansion == "" {
+            combinedEndpoint = ""
+        }
+        var expansion = "Dominion"
+        
+        showLoadingView()
+        
+        NetworkManager.shared.getCardList(for: combinedEndpoint, page: 1) {[weak self] result in
+            
+            guard let self = self else { return }
+            
+            self.dismissLoadingView()
+            
+            switch result {
+            case .success(let cards):
+                if expansion == ""  {
+                    print("Is this being executed")
+                    self.listOfCards.append(contentsOf: cards)
+                } else {
+                    let filteredCards = cards.filter { $0.setName == expansion }
+                    self.listOfCards.append(contentsOf: filteredCards.shuffled())
+                }
+                if self.listOfCards.isEmpty {
+                    let message = "NO Cards Avaliable"
+                    self.presentDPAlertOnMainThread(title: "Error", message: message, buttonTitle: "Ok")
+                }
+            case .failure(let error):
+                self.presentDPAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "ok")
+            }
+            
+        }
+    }
+    
+    
+    func randomizedListOfNumber(range: Int) -> [Int] {
+        
+        var random = Int.random(in: 0..<range)
+        var randomResult: [Int] = []
+        
+        for _ in 0..<10 {
+            random = Int.random(in: 0...range-1, excluding: random)
+            randomResult.append(random)
+        }
+        return randomResult
+    }
+    
     
 
     
@@ -77,17 +145,31 @@ class CardRandomizerVC: UIViewController {
 }
 
 extension CardRandomizerVC: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardRandomizerCell.reuseID, for: indexPath) as! CardRandomizerCell
-        cell.backgroundColor = .systemBlue
+        
+        if listOfCards.isEmpty {
+            print(indexPath.row)
+            return cell }
+
+        cell.set(card: listOfCards[indexPath.row])
+
         return cell
+    }
+}
+
+extension CardRandomizerVC: UICollectionViewDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
     }
 }
 
 extension CardRandomizerVC: UICollectionViewDelegate {
     
 }
+
+
