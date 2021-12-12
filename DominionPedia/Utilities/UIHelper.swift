@@ -121,4 +121,5 @@ class PagingCollectionViewLayout: UICollectionViewFlowLayout {
             return CGPoint(x: 0, y: nextPage * pageLength)
         }
     }
+    
 }

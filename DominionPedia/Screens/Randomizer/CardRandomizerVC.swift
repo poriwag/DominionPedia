@@ -6,33 +6,64 @@
 //
 
 import UIKit
+import ViewAnimator
+
+
 
 class CardRandomizerVC: UIViewController {
-
-    enum Section {
-        case main
-    }
+    
+    var prefetchingIndexPaths = [IndexPath: Card]()
     
     var listOfCards: [Card] = []
-    var filteredListOfCards: [Card] = []
-    var shuffedList: [Card] = []
-    
-    private var scrollView = UIScrollView()
     var collectionView: UICollectionView!
-    var randomlizeListOfNumber: [Int] = []
     
+    var randomizeButton = DPButton(color: .systemBlue, title: "Randomize", systemImage: SFSymbolString.dice)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         
         configureCollectionView()
+        
+        configureViewController()
+        setupUIConstraints()
         getCardList(named: "", endpoint: "")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //getCardList(named: "", endpoint: "")
+        configureRandomizeButton()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        animate()
+    }
+    func configureViewController() {
+        title = "Randomizer"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        //setup navigation bar
+        let optionsButton = UIBarButtonItem(image: SFSymbols.cardList, style: .plain, target: self, action: #selector(expansionListNames))
+        navigationItem.rightBarButtonItems = [optionsButton]
+    }
+    
+    @objc func expansionListNames() {
+        let firstTenCards = Array(listOfCards[0..<10])
+        let destVC = CardRandomizerListVC(listOfCards: firstTenCards)
+        let navController = UINavigationController(rootViewController: destVC)
+        present(navController, animated: true)
+    }
+    
+    @objc func expansionListOption() {
+        let destVC = CardRandomizerOptionsVC()
+        
+        let navController = UINavigationController(rootViewController: destVC)
+        present(navController, animated: true)
     }
     
     func configureCollectionView() {
@@ -41,31 +72,45 @@ class CardRandomizerVC: UIViewController {
         //layout.itemSize = CGSize(width: view.frame.width-300, height: view.frame.height-200)
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 100, left: 150, bottom: 100, right: 150)
-        //layout.numberOfItemsPerPage = 1
         
-
-        
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         //collectionView.isPagingEnabled = true
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.decelerationRate = .fast
         
         collectionView.register(CardRandomizerCell.self, forCellWithReuseIdentifier: CardRandomizerCell.reuseID)
-        view.addSubview(collectionView)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 550)
-        ])
     }
     
+    func setupUIConstraints() {
+        view.addSubview(collectionView)
+        view.addSubview(randomizeButton)
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: 550),
+            
+            randomizeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            randomizeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
+            randomizeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            randomizeButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    func configureRandomizeButton() {
+        randomizeButton.addTarget(self, action: #selector(randomizePushed), for: .touchUpInside)
+        //collectionView.reloadData()
 
+    }
+    
+    @objc func randomizePushed() {
+        listOfCards = listOfCards.shuffled()
+        animate()
+        
+    }
     
     func getCardList(named expansion: String, endpoint: String) {
         
@@ -101,50 +146,25 @@ class CardRandomizerVC: UIViewController {
             case .failure(let error):
                 self.presentDPAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "ok")
             }
-            
+            self.animate()
         }
     }
     
-    
-    func randomizedListOfNumber(range: Int) -> [Int] {
+    func animate() {
+        let animation = AnimationType.from(direction: .right, offset: 400)
         
-        var random = Int.random(in: 0..<range)
-        var randomResult: [Int] = []
-        
-        for _ in 0..<10 {
-            random = Int.random(in: 0...range-1, excluding: random)
-            randomResult.append(random)
+        DispatchQueue.main.async {
+            UIView.animate(views: self.collectionView.visibleCells, animations: [animation], delay: 0, duration: 0.25)
+            self.collectionView.reloadData()
         }
-        return randomResult
+        
     }
     
-    
-
-    
-//    private func configureScrollView() {
-//        scrollView.backgroundColor = .red
-//        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-//        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(10), height: 0)
-//        scrollView.isPagingEnabled = true
-//        scrollView.alwaysBounceHorizontal = true
-//
-//    }
-//
-//    private func layoutUI() {
-//
-//        view.addSubview(scrollView)
-//        scrollView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        NSLayoutConstraint.activate([
-//            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-//            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            scrollView.heightAnchor.constraint(equalToConstant: 600),
-//        ])
-//    }
 }
 
 extension CardRandomizerVC: UICollectionViewDataSource {
+    
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -156,20 +176,23 @@ extension CardRandomizerVC: UICollectionViewDataSource {
         if listOfCards.isEmpty {
             print(indexPath.row)
             return cell }
-
-        cell.set(card: listOfCards[indexPath.row])
-
+        
+        cell.set(card: self.listOfCards[indexPath.row])
+//        let animation = AnimationType.from(direction: .right, offset: 400)
+//        UIView.animate(views: [cell], animations: [animation], delay: 0, duration: 0.25)
+        
         return cell
     }
 }
 
 extension CardRandomizerVC: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        
     }
 }
 
 extension CardRandomizerVC: UICollectionViewDelegate {
-    
+
 }
 
 

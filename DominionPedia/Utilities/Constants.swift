@@ -23,6 +23,7 @@ enum SFSymbols {
 enum SFSymbolString {
     static let search = "magnifyingglass.circle"
     static let book = "text.book.closed.fill"
+    static let dice = "dice.fill"
 }
 
 enum Images {

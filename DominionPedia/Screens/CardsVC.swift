@@ -32,7 +32,6 @@ class CardsVC: UIViewController {
         expansionName = ""
         endPoint = ""
         title = "List of Cards"
-        
     }
     
     convenience init(expansionName: String, endpoint: String) {
@@ -62,7 +61,6 @@ class CardsVC: UIViewController {
     }
     
     private func configureViewController() {
-        //title = "List of Cards"
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
     }

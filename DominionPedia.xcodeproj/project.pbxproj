@@ -3,18 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B878DEF660D516EC8DBD734 /* Pods_DominionPediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5541FA879D7426525730A7 /* Pods_DominionPediaTests.framework */; };
 		663B06D52702A0CF00005327 /* Expansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B06D42702A0CF00005327 /* Expansion.swift */; };
 		663B06D72704478300005327 /* ExpansionTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B06D62704478300005327 /* ExpansionTapGestureRecognizer.swift */; };
 		663B06D9270545A700005327 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663B06D8270545A700005327 /* Launch Screen.storyboard */; };
 		6656C71A2737DAEE00F83CA2 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6656C7192737DAEE00F83CA2 /* ValidationService.swift */; };
 		6656C7222737DC5100F83CA2 /* DominionPediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6656C7212737DC5100F83CA2 /* DominionPediaTests.swift */; };
 		6656C7292737DC9000F83CA2 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6656C7282737DC9000F83CA2 /* ValidationServiceTests.swift */; };
+		665BC392274F445400874266 /* CardRandomizerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665BC391274F445400874266 /* CardRandomizerListVC.swift */; };
+		665BC394274F63A900874266 /* CardListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665BC393274F63A900874266 /* CardListTableViewCell.swift */; };
 		6660C97E2745F4AB00505D35 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660C97D2745F4AB00505D35 /* ZoomAndSnapFlowLayout.swift */; };
 		6660C9E8274B163100505D35 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660C9E7274B163000505D35 /* Int+Ext.swift */; };
+		6660C9EB274E3E9900505D35 /* CardRandomizerOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660C9EA274E3E9900505D35 /* CardRandomizerOptionsVC.swift */; };
 		6664C13326DBA30F0038733D /* DPUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */; };
 		6664C13926DBA6F40038733D /* DPSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */; };
 		6664C13B26E9D9F40038733D /* DPFullScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */; };
@@ -55,6 +59,7 @@
 		66E268762720B58300EB66B3 /* ToolsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268752720B58300EB66B3 /* ToolsCell.swift */; };
 		66E2687A2720B79100EB66B3 /* DPToolsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268792720B79100EB66B3 /* DPToolsImageView.swift */; };
 		66F8CB2E26F9DFFF0017861F /* DPExpansionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */; };
+		F14D590C49714326452994F6 /* Pods_DominionPedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFBC5C7A05DB2B0987DB257 /* Pods_DominionPedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		112E42944C41621FB37D0204 /* Pods-DominionPedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominionPedia.debug.xcconfig"; path = "Target Support Files/Pods-DominionPedia/Pods-DominionPedia.debug.xcconfig"; sourceTree = "<group>"; };
+		3E5541FA879D7426525730A7 /* Pods_DominionPediaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominionPediaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F5F58AEB0F021B74B8E684B /* Pods-DominionPediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominionPediaTests.release.xcconfig"; path = "Target Support Files/Pods-DominionPediaTests/Pods-DominionPediaTests.release.xcconfig"; sourceTree = "<group>"; };
+		563C2714157EA9B631879A28 /* Pods-DominionPediaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominionPediaTests.debug.xcconfig"; path = "Target Support Files/Pods-DominionPediaTests/Pods-DominionPediaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		663B06D42702A0CF00005327 /* Expansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansion.swift; sourceTree = "<group>"; };
 		663B06D62704478300005327 /* ExpansionTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		663B06D8270545A700005327 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -75,8 +84,11 @@
 		6656C71F2737DC5100F83CA2 /* DominionPediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DominionPediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6656C7212737DC5100F83CA2 /* DominionPediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionPediaTests.swift; sourceTree = "<group>"; };
 		6656C7282737DC9000F83CA2 /* ValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceTests.swift; sourceTree = "<group>"; };
+		665BC391274F445400874266 /* CardRandomizerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRandomizerListVC.swift; sourceTree = "<group>"; };
+		665BC393274F63A900874266 /* CardListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListTableViewCell.swift; sourceTree = "<group>"; };
 		6660C97D2745F4AB00505D35 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
 		6660C9E7274B163000505D35 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
+		6660C9EA274E3E9900505D35 /* CardRandomizerOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRandomizerOptionsVC.swift; sourceTree = "<group>"; };
 		6664C13226DBA30F0038733D /* DPUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		6664C13826DBA6F40038733D /* DPSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		6664C13A26E9D9F40038733D /* DPFullScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPFullScreenVC.swift; sourceTree = "<group>"; };
@@ -119,6 +131,8 @@
 		66E268752720B58300EB66B3 /* ToolsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsCell.swift; sourceTree = "<group>"; };
 		66E268792720B79100EB66B3 /* DPToolsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPToolsImageView.swift; sourceTree = "<group>"; };
 		66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPExpansionImageView.swift; sourceTree = "<group>"; };
+		9DFBC5C7A05DB2B0987DB257 /* Pods_DominionPedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominionPedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10AC7752E3BF76BBB02023E /* Pods-DominionPedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominionPedia.release.xcconfig"; path = "Target Support Files/Pods-DominionPedia/Pods-DominionPedia.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B878DEF660D516EC8DBD734 /* Pods_DominionPediaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,12 +148,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F14D590C49714326452994F6 /* Pods_DominionPedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D7EC981FD1EDB389FDE7E27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DFBC5C7A05DB2B0987DB257 /* Pods_DominionPedia.framework */,
+				3E5541FA879D7426525730A7 /* Pods_DominionPediaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		446DD9F076801CC2E5A3A728 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				112E42944C41621FB37D0204 /* Pods-DominionPedia.debug.xcconfig */,
+				B10AC7752E3BF76BBB02023E /* Pods-DominionPedia.release.xcconfig */,
+				563C2714157EA9B631879A28 /* Pods-DominionPediaTests.debug.xcconfig */,
+				4F5F58AEB0F021B74B8E684B /* Pods-DominionPediaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6656C7182737DAC500F83CA2 /* Testing */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +190,35 @@
 				6656C7282737DC9000F83CA2 /* ValidationServiceTests.swift */,
 			);
 			path = DominionPediaTests;
+			sourceTree = "<group>";
+		};
+		665BC395274F63B400874266 /* TableView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				665BC393274F63A900874266 /* CardListTableViewCell.swift */,
+				66E268752720B58300EB66B3 /* ToolsCell.swift */,
+				66DA27D826B7585C00687663 /* FavoritesCell.swift */,
+			);
+			path = "TableView Cell";
+			sourceTree = "<group>";
+		};
+		665BC396274F63BD00874266 /* CollectionView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				66A39C5A273FBEB40007CAC4 /* CardRandomizerCell.swift */,
+				66DA27E426BE038F00687663 /* CardListCell.swift */,
+			);
+			path = "CollectionView Cell";
+			sourceTree = "<group>";
+		};
+		6660C9E9274E3D7600505D35 /* Randomizer */ = {
+			isa = PBXGroup;
+			children = (
+				66A39C58273FAA0A0007CAC4 /* CardRandomizerVC.swift */,
+				6660C9EA274E3E9900505D35 /* CardRandomizerOptionsVC.swift */,
+				665BC391274F445400874266 /* CardRandomizerListVC.swift */,
+			);
+			path = Randomizer;
 			sourceTree = "<group>";
 		};
 		6664C13626DBA4D10038733D /* Button */ = {
@@ -189,6 +254,8 @@
 				66DA279526A6514800687663 /* DominionPedia */,
 				6656C7202737DC5100F83CA2 /* DominionPediaTests */,
 				66DA279426A6514800687663 /* Products */,
+				446DD9F076801CC2E5A3A728 /* Pods */,
+				3D7EC981FD1EDB389FDE7E27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,13 +290,13 @@
 		66DA27AC26A6585F00687663 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				66DA27AA26A656C900687663 /* SearchVC.swift */,
+				6660C9E9274E3D7600505D35 /* Randomizer */,
 				66DA27AD26A658AC00687663 /* FavoritesVC.swift */,
+				66DA27AA26A656C900687663 /* SearchVC.swift */,
 				66DA27AF26A658BD00687663 /* ExpansionsVC.swift */,
 				66DA27B126A658D300687663 /* CardsVC.swift */,
 				66DA27C826B202A700687663 /* CardInfoVC.swift */,
 				66DA27B326A658E500687663 /* ToolsVC.swift */,
-				66A39C58273FAA0A0007CAC4 /* CardRandomizerVC.swift */,
 				66A39C5C274103FF0007CAC4 /* dummyVC.swift */,
 			);
 			path = Screens;
@@ -312,10 +379,8 @@
 		66DA27D726B7583600687663 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				66DA27D826B7585C00687663 /* FavoritesCell.swift */,
-				66DA27E426BE038F00687663 /* CardListCell.swift */,
-				66E268752720B58300EB66B3 /* ToolsCell.swift */,
-				66A39C5A273FBEB40007CAC4 /* CardRandomizerCell.swift */,
+				665BC396274F63BD00874266 /* CollectionView Cell */,
+				665BC395274F63B400874266 /* TableView Cell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -347,6 +412,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6656C7252737DC5100F83CA2 /* Build configuration list for PBXNativeTarget "DominionPediaTests" */;
 			buildPhases = (
+				3C0D12E69E9981D993DD8AF5 /* [CP] Check Pods Manifest.lock */,
 				6656C71B2737DC5100F83CA2 /* Sources */,
 				6656C71C2737DC5100F83CA2 /* Frameworks */,
 				6656C71D2737DC5100F83CA2 /* Resources */,
@@ -365,9 +431,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66DA27A726A6514D00687663 /* Build configuration list for PBXNativeTarget "DominionPedia" */;
 			buildPhases = (
+				19E6B6B5D5E9ABBA7B7F052E /* [CP] Check Pods Manifest.lock */,
 				66DA278F26A6514800687663 /* Sources */,
 				66DA279026A6514800687663 /* Frameworks */,
 				66DA279126A6514800687663 /* Resources */,
+				84701668340A349362DA6F8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -434,6 +502,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19E6B6B5D5E9ABBA7B7F052E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DominionPedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C0D12E69E9981D993DD8AF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DominionPediaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84701668340A349362DA6F8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DominionPedia/Pods-DominionPedia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DominionPedia/Pods-DominionPedia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DominionPedia/Pods-DominionPedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6656C71B2737DC5100F83CA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -454,11 +586,13 @@
 				66A39C5D274103FF0007CAC4 /* dummyVC.swift in Sources */,
 				66DA279726A6514800687663 /* AppDelegate.swift in Sources */,
 				6664C13326DBA30F0038733D /* DPUserInfoHeaderVC.swift in Sources */,
+				665BC394274F63A900874266 /* CardListTableViewCell.swift in Sources */,
 				6664C13B26E9D9F40038733D /* DPFullScreenVC.swift in Sources */,
 				6656C71A2737DAEE00F83CA2 /* ValidationService.swift in Sources */,
 				66DA27DF26BC890B00687663 /* NetworkManager.swift in Sources */,
 				6664C13926DBA6F40038733D /* DPSecondaryTitleLabel.swift in Sources */,
 				6664C14326EC20A60038733D /* PersistenceManager.swift in Sources */,
+				665BC392274F445400874266 /* CardRandomizerListVC.swift in Sources */,
 				6664C14126EABCAA0038733D /* UIImage+Ext.swift in Sources */,
 				66DA27C526AB91A300687663 /* DPTextField.swift in Sources */,
 				66E268742720AE3E00EB66B3 /* ToolsModel.swift in Sources */,
@@ -478,6 +612,7 @@
 				6660C9E8274B163100505D35 /* Int+Ext.swift in Sources */,
 				66DA27D326B4D88000687663 /* DPAlertVC.swift in Sources */,
 				66DA27E326BDFF3900687663 /* DPError.swift in Sources */,
+				6660C9EB274E3E9900505D35 /* CardRandomizerOptionsVC.swift in Sources */,
 				66A39C5B273FBEB50007CAC4 /* CardRandomizerCell.swift in Sources */,
 				66DA27D926B7585C00687663 /* FavoritesCell.swift in Sources */,
 				66DA27B226A658D300687663 /* CardsVC.swift in Sources */,
@@ -508,6 +643,7 @@
 /* Begin XCBuildConfiguration section */
 		6656C7262737DC5100F83CA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 563C2714157EA9B631879A28 /* Pods-DominionPediaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -533,6 +669,7 @@
 		};
 		6656C7272737DC5100F83CA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F5F58AEB0F021B74B8E684B /* Pods-DominionPediaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -674,6 +811,7 @@
 		};
 		66DA27A826A6514D00687663 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 112E42944C41621FB37D0204 /* Pods-DominionPedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -693,6 +831,7 @@
 		};
 		66DA27A926A6514D00687663 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B10AC7752E3BF76BBB02023E /* Pods-DominionPedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

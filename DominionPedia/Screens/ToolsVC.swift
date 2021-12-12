@@ -42,7 +42,7 @@ extension ToolsVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
             case 3:
             //randomizerVC.listOfCards = randomizerVC.listOfCards.shuffled()
-            self.navigationController?.pushViewController(CardRandomizerVC(), animated: true)
+            self.navigationController?.pushViewController(self.randomizerVC, animated: true)
         default:
                 print("Cell does not exist")
         }
