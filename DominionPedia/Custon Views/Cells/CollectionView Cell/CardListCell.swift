@@ -12,7 +12,7 @@ class CardListCell: UICollectionViewCell {
     static let reuseID = "CardListCell"
     
     let avatarImageView = DPCardImageView(frame: .zero)
-    let usernameLabel = DPTitleLabel(textAlignment: .center, fontSize: 16)
+    let cardNameLabel = DPTitleLabel(textAlignment: .center, fontSize: 16)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,7 +29,7 @@ class CardListCell: UICollectionViewCell {
     }
     
     func set(card: Card) {
-        usernameLabel.text = card.cardName
+        cardNameLabel.text = card.cardName
         avatarImageView.image = loadImage(card: card)
     }
     
@@ -52,21 +52,21 @@ class CardListCell: UICollectionViewCell {
             avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
             avatarImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             avatarImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            avatarImageView.heightAnchor.constraint(equalToConstant: height),
-            avatarImageView.widthAnchor.constraint(equalToConstant: 100)
+            avatarImageView.widthAnchor.constraint(equalToConstant: 100),
+            avatarImageView.heightAnchor.constraint(equalToConstant: height)
         ])
     }
     
     private func configureUserNameLabel() {
-        addSubview(usernameLabel)
+        addSubview(cardNameLabel)
         
         let padding: CGFloat = 8
         
         NSLayoutConstraint.activate([
-            usernameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 12),
-            usernameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            usernameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            usernameLabel.heightAnchor.constraint(equalToConstant: 20)
+            cardNameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 12),
+            cardNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            cardNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+            cardNameLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 }

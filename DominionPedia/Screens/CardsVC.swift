@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CardsVCDelegate: class {
+protocol CardsVCDelegate: AnyObject {
     func didRequestCards(for card: String)
 }
 
@@ -32,7 +32,6 @@ class CardsVC: UIViewController {
         expansionName = ""
         endPoint = ""
         title = "List of Cards"
-        
     }
     
     convenience init(expansionName: String, endpoint: String) {
@@ -62,7 +61,6 @@ class CardsVC: UIViewController {
     }
     
     private func configureViewController() {
-        //title = "List of Cards"
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -82,7 +80,6 @@ class CardsVC: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<Section, Card>(collectionView: collectionView, cellProvider: {(collectionView, indexPath, card) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardListCell.reuseID, for: indexPath) as! CardListCell
             cell.set(card: card)
-            
             return cell
         })
     }
@@ -172,7 +169,13 @@ class CardsVC: UIViewController {
             
             switch result {
             case .success(let cards):
-                self.listOfCards.append(contentsOf: cards)
+                if expansion == ""  {
+                    print("Is this being executed")
+                    self.listOfCards.append(contentsOf: cards)
+                } else {
+                    let filteredCards = cards.filter { $0.setName == expansion }
+                    self.listOfCards.append(contentsOf: filteredCards)
+                }
                 if self.listOfCards.isEmpty {
                     let message = "NO Cards Avaliable"
                     self.presentDPAlertOnMainThread(title: "Error", message: message, buttonTitle: "Ok")
@@ -215,7 +218,6 @@ extension CardsVC: UISearchBarDelegate, UISearchResultsUpdating {
         guard let filter = searchController.searchBar.text, !filter.isEmpty else {
             return
         }
-        
         isSearching = true
         filteredListOfCards = listOfCards.filter {
             $0.cardName.lowercased().contains(filter.lowercased())

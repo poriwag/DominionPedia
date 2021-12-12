@@ -27,8 +27,7 @@ class DPCardImageView: UIImageView {
         layer.cornerRadius = 3
         clipsToBounds = true
         image = placeHolderImage
-        
-        //contentMode = .scaleAspectFit
+        contentMode = .scaleAspectFit
     }
     
     func setImage(image: UIImage){

@@ -11,7 +11,7 @@ class SearchVC: UIViewController {
 
     let logoImageView = UIImageView()
     let cardTextField = DPTextField()
-    let callToActionButton = DPButton(backgroundColor: .systemBlue, title: "Get Card Data")
+    let callToActionButton = DPButton(color: .systemBlue, title: "Get Card Data", systemImage: SFSymbolString.search)
     
     var isCardNameEntered: Bool { return !cardTextField.text!.isEmpty }
     

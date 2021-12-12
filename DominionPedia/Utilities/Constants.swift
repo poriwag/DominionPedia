@@ -20,6 +20,12 @@ enum SFSymbols {
     static let placeHolder = UIImage(systemName: "photo.artframe")
 }
 
+enum SFSymbolString {
+    static let search = "magnifyingglass.circle"
+    static let book = "text.book.closed.fill"
+    static let dice = "dice.fill"
+}
+
 enum Images {
     static let dominionLogo = UIImage(named: "DominionLogo")
     static let defaultImage = UIImage(named: "CardBack")

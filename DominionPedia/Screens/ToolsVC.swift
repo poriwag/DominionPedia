@@ -10,6 +10,7 @@ import UIKit
 class ToolsVC: UIViewController {
 
     var tableView = UITableView()
+    var randomizerVC = CardRandomizerVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,19 @@ class ToolsVC: UIViewController {
 }
 
 extension ToolsVC: UITableViewDelegate, UITableViewDataSource {
+    // MARK: UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+            case 3:
+            //randomizerVC.listOfCards = randomizerVC.listOfCards.shuffled()
+            self.navigationController?.pushViewController(self.randomizerVC, animated: true)
+        default:
+                print("Cell does not exist")
+        }
+    }
+    
+    
+    //MARK: UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

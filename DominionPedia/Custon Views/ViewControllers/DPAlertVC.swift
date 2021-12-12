@@ -12,7 +12,7 @@ class DPAlertVC: UIViewController {
     let containerView = DPAlertContainerView()
     let titleLabel = DPTitleLabel(textAlignment: .center, fontSize: 20)
     let bodyLabel = DPBodyLabel(textAlignment: .center)
-    let actionButton = DPButton(backgroundColor: .systemTeal, title: "Ok")
+    let actionButton = DPButton(color: .systemTeal, title: "Ok")
     
     var alertTitle: String?
     var message: String?

@@ -18,8 +18,6 @@ struct Card: Codable, Hashable {
     let cost: String
     let cardText: String
     var source: String
-    
-    
 }
 
 

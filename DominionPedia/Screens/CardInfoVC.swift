@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CardInfoVCDelegate: class {
+protocol CardInfoVCDelegate: AnyObject {
     func didTapCardInfo(for card: Card)
     func didTapGetExpansion(for card: Card)
 }
@@ -18,8 +18,8 @@ class CardInfoVC: UIViewController {
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
     
-    let callToSafariButton = DPButton(backgroundColor: .purple, title: "Get More Info")
-    let callToExpansionButton = DPButton(backgroundColor: .blue, title: "Get Expansion List")
+    let callToSafariButton = DPButton(color: .purple, title: "Get More Info", systemImage: SFSymbolString.search)
+    let callToExpansionButton = DPButton(color: .blue, title: "Get Expansion List", systemImage: SFSymbolString.book)
     
     weak var delegate: CardsVCDelegate!
     

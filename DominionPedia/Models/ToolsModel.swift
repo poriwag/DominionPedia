@@ -14,7 +14,8 @@ struct ToolsModel {
     
     static let list: [ToolsModel] = [
         ToolsModel(iconImage: SFSymbols.settings!, title: "Settings"),
-        ToolsModel(iconImage: SFSymbols.person!, title: "Developed By: Billy Pak"),
-        ToolsModel(iconImage: SFSymbols.brainHead!, title: "Credit to: Donald X Vaccarino")
+        ToolsModel(iconImage: SFSymbols.person!, title: "By: Billy Pak"),
+        ToolsModel(iconImage: SFSymbols.brainHead!, title: "Credit: Donald X Vaccarino"),
+        ToolsModel(iconImage: UIImage(systemName: SFSymbolString.dice)!, title: "Randomizer")
     ]
 }
