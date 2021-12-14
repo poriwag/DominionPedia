@@ -120,7 +120,7 @@ class CardRandomizerVC: UIViewController {
         if expansion == "" {
             combinedEndpoint = ""
         }
-        var expansion = "Dominion"
+        let expansion = "Dominion"
         
         showLoadingView()
         
@@ -163,9 +163,7 @@ class CardRandomizerVC: UIViewController {
 }
 
 extension CardRandomizerVC: UICollectionViewDataSource {
-    
 
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
@@ -178,8 +176,6 @@ extension CardRandomizerVC: UICollectionViewDataSource {
             return cell }
         
         cell.set(card: self.listOfCards[indexPath.row])
-//        let animation = AnimationType.from(direction: .right, offset: 400)
-//        UIView.animate(views: [cell], animations: [animation], delay: 0, duration: 0.25)
         
         return cell
     }

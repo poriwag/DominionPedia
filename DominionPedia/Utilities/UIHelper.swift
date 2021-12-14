@@ -33,41 +33,8 @@ struct UIHelper {
         return result
     }
     
-//    static func createCardCollectionFlowLayout(in view: UIView) -> UICollectionViewFlowLayout {
-//        let itemHeight = 200
-//        let itemWidth = 100
-//
-//        let flowLayout = UICollectionViewFlowLayout()
-//
-//
-//        return flowLayout
-//    }
+
 }
-
-class CardCollectionFlowLayout: UICollectionViewFlowLayout {
-    let itemHeight = 200
-    let itemWidth = 100
-    let inset: CGFloat = 100
-    //prepare() method is called to tell the collectionView layout object to update
-    //layout updates occur first time collectionView presets its content or invalidated
-
-    override func prepare() {
-        guard let collectionView = collectionView else { return }
-        
-
-        scrollDirection = .horizontal
-        itemSize = CGSize(width: collectionView.frame.size.width - inset * 2, height: collectionView.frame.size.height)
-        sectionInset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
-        minimumLineSpacing = 0
-        
-
-//        let peekingItemWidth = itemSize.width / 10
-//        let horizontalInsets = (collectionView.frame.size.width - itemSize.width) / 2
-//
-//        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0 , right: 20)
-    }
-}
-
 
 class PagingCollectionViewLayout: UICollectionViewFlowLayout {
     
@@ -91,8 +58,6 @@ class PagingCollectionViewLayout: UICollectionViewFlowLayout {
             approxPage = collectionView.contentOffset.y / pageLength
             speed = velocity.y
         }
-        
-        
         
         if speed < 0 {
             currentPage = ceil(approxPage)
@@ -121,5 +86,4 @@ class PagingCollectionViewLayout: UICollectionViewFlowLayout {
             return CGPoint(x: 0, y: nextPage * pageLength)
         }
     }
-    
 }

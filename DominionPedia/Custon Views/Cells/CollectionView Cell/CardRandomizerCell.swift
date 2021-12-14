@@ -51,11 +51,6 @@ class CardRandomizerCell: UICollectionViewCell {
     private func configureAvatarImageView() {
         addSubview(cardImage)
         
-        let padding: CGFloat = 8
-        let height = CGFloat(cardImage.frame.width) + 150
-        
-        
-        
         NSLayoutConstraint.activate([
             cardImage.centerYAnchor.constraint(equalTo: centerYAnchor),
             cardImage.centerXAnchor.constraint(equalTo: centerXAnchor),

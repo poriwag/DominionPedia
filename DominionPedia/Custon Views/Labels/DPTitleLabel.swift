@@ -12,7 +12,6 @@ class DPTitleLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -34,8 +33,4 @@ class DPTitleLabel: UILabel {
         lineBreakMode = .byTruncatingTail
         
     }
-    
-    
-    
-    
 }
