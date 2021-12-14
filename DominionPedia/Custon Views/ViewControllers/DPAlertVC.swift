@@ -39,8 +39,6 @@ class DPAlertVC: UIViewController {
         configureTitleLabel()
         configureActionButton()
         configureBodyLabel()
-        
-        
     }
     
     func configureContainerView() {

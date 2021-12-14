@@ -49,7 +49,6 @@ class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
                 attributes.zIndex = Int(zoom.rounded())
             }
         }
-
         return rectAttributes
     }
 

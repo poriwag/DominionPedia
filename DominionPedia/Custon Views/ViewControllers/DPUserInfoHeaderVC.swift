@@ -82,8 +82,6 @@ class DPUserInfoHeaderVC: UIViewController {
             cardTextLabel.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
             cardTextLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             cardTextLabel.heightAnchor.constraint(equalToConstant: 150)
- 
-            
         ])
     }
     

@@ -94,7 +94,6 @@ class CardInfoVC: UIViewController {
     
     func layoutUI() {
         let padding: CGFloat = 20
-        let itemHeight: CGFloat = 180
         let buttonHeight: CGFloat = 50
         
         view.addSubview(headerView)
@@ -120,18 +119,7 @@ class CardInfoVC: UIViewController {
             callToExpansionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
             callToExpansionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             callToExpansionButton.heightAnchor.constraint(equalToConstant: buttonHeight)
-            /*
-            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
-            itemViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            itemViewOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
-            
-            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
-            itemViewTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            itemViewTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight)
- 
-            */
+
         ])
     }
     

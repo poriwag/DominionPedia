@@ -19,7 +19,6 @@ enum PersistenceManager {
         static let favorites = Keys.favorites
     }
     
-    
     static func updateWith(favorite: Card, actionType: PersistenceActionType, completed: @escaping (DPError?) -> Void) {
         retrieveFavorites { result in
             switch result {

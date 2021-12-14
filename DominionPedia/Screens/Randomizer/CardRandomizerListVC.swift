@@ -61,7 +61,6 @@ class CardRandomizerListVC: UIViewController {
     @objc func dismissVC() {
         dismiss(animated: true)
     }
-
 }
 
 extension CardRandomizerListVC: UITableViewDataSource {
