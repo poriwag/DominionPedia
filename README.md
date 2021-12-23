@@ -4,6 +4,7 @@ Dominion Board game based app where you can look up card information easily. Pro
 
 ## Randonize Feature
 You may scroll through, toggle it into a list if you prefer and randomize the cards if you wish to start with another preset
+
 <img width="360" alt="Screen Shot 2021-12-11 at 10 26 59 PM" src="https://user-images.githubusercontent.com/14205107/145702810-a91f06ba-7a4b-472b-9f8d-599b992e6b2d.png">
 
 ## Expansions
