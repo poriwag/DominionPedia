@@ -11,6 +11,7 @@ import UIKit
 class NetworkManager {
     static let shared   = NetworkManager()
     let baseURL         = "https://dominioncardapi.pythonanywhere.com/cards/"
+    let token           = "Token 0b4b13fa0a972c198b52efa63d9224b182f0af6c"
     
     private init() {}
     
@@ -22,7 +23,7 @@ class NetworkManager {
         
         
         var request = URLRequest(url: URL(string: endpoint)!,timeoutInterval: Double.infinity)
-        request.addValue("Token 0b4b13fa0a972c198b52efa63d9224b182f0af6c", forHTTPHeaderField: "Authorization")
+        request.addValue(token, forHTTPHeaderField: "Authorization")
             
         request.httpMethod = "GET"
         

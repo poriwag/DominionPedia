@@ -50,6 +50,7 @@
 		66E268742720AE3E00EB66B3 /* ToolsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268732720AE3E00EB66B3 /* ToolsModel.swift */; };
 		66E268762720B58300EB66B3 /* ToolsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268752720B58300EB66B3 /* ToolsCell.swift */; };
 		66E2687A2720B79100EB66B3 /* DPToolsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268792720B79100EB66B3 /* DPToolsImageView.swift */; };
+		66F4BA932774E75C00806497 /* DominionApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4BA922774E75C00806497 /* DominionApiTest.swift */; };
 		66F8CB2E26F9DFFF0017861F /* DPExpansionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		66E268732720AE3E00EB66B3 /* ToolsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsModel.swift; sourceTree = "<group>"; };
 		66E268752720B58300EB66B3 /* ToolsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsCell.swift; sourceTree = "<group>"; };
 		66E268792720B79100EB66B3 /* DPToolsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPToolsImageView.swift; sourceTree = "<group>"; };
+		66F4BA922774E75C00806497 /* DominionApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionApiTest.swift; sourceTree = "<group>"; };
 		66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPExpansionImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 			children = (
 				6656C7212737DC5100F83CA2 /* DominionPediaTests.swift */,
 				6656C7282737DC9000F83CA2 /* ValidationServiceTests.swift */,
+				66F4BA922774E75C00806497 /* DominionApiTest.swift */,
 			);
 			path = DominionPediaTests;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			files = (
 				6656C7292737DC9000F83CA2 /* ValidationServiceTests.swift in Sources */,
 				6656C7222737DC5100F83CA2 /* DominionPediaTests.swift in Sources */,
+				66F4BA932774E75C00806497 /* DominionApiTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +668,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27TJPLK9L4;
 				INFOPLIST_FILE = DominionPedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -671,7 +676,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Billypak.DominionPedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -683,6 +688,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27TJPLK9L4;
 				INFOPLIST_FILE = DominionPedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -690,7 +696,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Billypak.DominionPedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

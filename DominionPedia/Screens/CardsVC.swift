@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CardsVCDelegate: class {
+protocol CardsVCDelegate: AnyObject {
     func didRequestCards(for card: String)
 }
 
@@ -96,63 +96,6 @@ class CardsVC: UIViewController {
         navigationItem.searchController = searchController
     }
     
-
-    
-    func getCardList() {
-        
-        showLoadingView()
-        
-        NetworkManager.shared.getCardList(for: "", page: 1) {[weak self] result in
-            
-            guard let self = self else { return }
-            
-            self.dismissLoadingView()
-            
-            switch result {
-            case .success(let cards):
-                self.listOfCards.append(contentsOf: cards)
-                if self.listOfCards.isEmpty {
-                    let message = "NO Cards Avaliable"
-                    self.presentDPAlertOnMainThread(title: "Error", message: message, buttonTitle: "Ok")
-                }
-            case .failure(let error):
-                self.presentDPAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "ok")
-            }
-            self.updateData(on: self.listOfCards)
-        }
-    }
-//
-//    func getCardList(named expansion: String) {
-//
-//        var endpoint = "?set_name=\(expansion)"
-//
-//        //manipulating the JSON request. If the string is empty, make it empty.
-//        if expansion == "" {
-//            endpoint = ""
-//        }
-//
-//        showLoadingView()
-//
-//        NetworkManager.shared.getCardList(for: endpoint, page: 1) {[weak self] result in
-//
-//            guard let self = self else { return }
-//
-//            self.dismissLoadingView()
-//
-//            switch result {
-//            case .success(let cards):
-//                self.listOfCards.append(contentsOf: cards)
-//                if self.listOfCards.isEmpty {
-//                    let message = "NO Cards Avaliable"
-//                    self.presentDPAlertOnMainThread(title: "Error", message: message, buttonTitle: "Ok")
-//                }
-//            case .failure(let error):
-//                self.presentDPAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "ok")
-//            }
-//            self.updateData(on: self.listOfCards)
-//        }
-//    }
-//
     func getCardList(named expansion: String, endpoint: String) {
         
         var combinedEndpoint = endpoint + expansion
@@ -183,7 +126,6 @@ class CardsVC: UIViewController {
             self.updateData(on: self.listOfCards)
         }
     }
-    
     
     func updateData(on cardList: [Card]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Card>()
@@ -235,6 +177,6 @@ extension CardsVC: CardsVCDelegate {
         listOfCards.removeAll()
         filteredListOfCards.removeAll()
         collectionView.setContentOffset(.zero, animated: true)
-        getCardList()
+        getCardList(named: "", endpoint: "")
     }
 }

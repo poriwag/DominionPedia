@@ -46,5 +46,5 @@ class DominionPediaTests: XCTestCase {
         XCTAssertEqual(nocturneDisplay, "Nocturne")
         XCTAssertEqual(renaissanceDisplay, "Renaissance")
     }
-
+    
 }
