@@ -58,6 +58,7 @@
 		66E268742720AE3E00EB66B3 /* ToolsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268732720AE3E00EB66B3 /* ToolsModel.swift */; };
 		66E268762720B58300EB66B3 /* ToolsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268752720B58300EB66B3 /* ToolsCell.swift */; };
 		66E2687A2720B79100EB66B3 /* DPToolsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E268792720B79100EB66B3 /* DPToolsImageView.swift */; };
+		66F4BA952774EC5A00806497 /* DominionApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4BA942774EC5A00806497 /* DominionApiTest.swift */; };
 		66F8CB2E26F9DFFF0017861F /* DPExpansionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */; };
 		F14D590C49714326452994F6 /* Pods_DominionPedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFBC5C7A05DB2B0987DB257 /* Pods_DominionPedia.framework */; };
 /* End PBXBuildFile section */
@@ -130,6 +131,7 @@
 		66E268732720AE3E00EB66B3 /* ToolsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsModel.swift; sourceTree = "<group>"; };
 		66E268752720B58300EB66B3 /* ToolsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsCell.swift; sourceTree = "<group>"; };
 		66E268792720B79100EB66B3 /* DPToolsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPToolsImageView.swift; sourceTree = "<group>"; };
+		66F4BA942774EC5A00806497 /* DominionApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionApiTest.swift; sourceTree = "<group>"; };
 		66F8CB2D26F9DFFF0017861F /* DPExpansionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPExpansionImageView.swift; sourceTree = "<group>"; };
 		9DFBC5C7A05DB2B0987DB257 /* Pods_DominionPedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DominionPedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10AC7752E3BF76BBB02023E /* Pods-DominionPedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominionPedia.release.xcconfig"; path = "Target Support Files/Pods-DominionPedia/Pods-DominionPedia.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				6656C7212737DC5100F83CA2 /* DominionPediaTests.swift */,
 				6656C7282737DC9000F83CA2 /* ValidationServiceTests.swift */,
+				66F4BA942774EC5A00806497 /* DominionApiTest.swift */,
 			);
 			path = DominionPediaTests;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 			files = (
 				6656C7292737DC9000F83CA2 /* ValidationServiceTests.swift in Sources */,
 				6656C7222737DC5100F83CA2 /* DominionPediaTests.swift in Sources */,
+				66F4BA952774EC5A00806497 /* DominionApiTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
